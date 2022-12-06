@@ -5,6 +5,10 @@ public class SecurityConstants {
 	// Spring Security
 	public static final String LOGIN_URL = "/login";
 	public static final String CLUB_URL = "/club";
+	
+	public static final String LOGIN_URL_HEROKU = "/football-club-app.herokuapp.com/login";
+	public static final String CLUB_URL_HEROKU = "/football-club-app.herokuapp.com/club";
+	
 	public static final String[] SWAGGER_UI = {
             // -- Swagger UI v2
             "/v2/api-docs", "/swagger-resources", "/swagger-resources/**",
@@ -12,6 +16,20 @@ public class SecurityConstants {
             "/webjars/**",
             // -- Swagger UI v3 (OpenAPI)
             "/v3/api-docs/**", "/swagger-ui/**"
+     };
+	
+	public static final String[] SWAGGER_UI_HEROKU = {
+            // -- Swagger UI v2
+            "/football-club-app.herokuapp.com/v2/api-docs",
+            "/football-club-app.herokuapp.com/swagger-resources",
+            "/football-club-app.herokuapp.comswagger-resources/**",
+            "/football-club-app.herokuapp.com/configuration/ui",
+            "//football-club-app.herokuapp.com/configuration/security",
+            "/football-club-app.herokuapp.com/swagger-ui.html",
+            "/football-club-app.herokuapp.com/webjars/**",
+            // -- Swagger UI v3 (OpenAPI)
+            "/football-club-app.herokuapp.com/v3/api-docs/**",
+            "/football-club-app.herokuapp.com/swagger-ui/**"
      };
 	
 	
