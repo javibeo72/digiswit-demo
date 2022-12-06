@@ -1,8 +1,11 @@
 package com.digiswit.exercise1.confederation.app.security;
 
-import static com.digiswit.exercise1.confederation.app.security.SecurityConstants.LOGIN_URL;
-import static com.digiswit.exercise1.confederation.app.security.SecurityConstants.CLUB_URL;
-import static com.digiswit.exercise1.confederation.app.security.SecurityConstants.SWAGGER_UI;
+//import static com.digiswit.exercise1.confederation.app.security.SecurityConstants.LOGIN_URL;
+//import static com.digiswit.exercise1.confederation.app.security.SecurityConstants.CLUB_URL;
+//import static com.digiswit.exercise1.confederation.app.security.SecurityConstants.SWAGGER_UI;
+import static com.digiswit.exercise1.confederation.app.security.SecurityConstants.LOGIN_URL_HEROKU;
+import static com.digiswit.exercise1.confederation.app.security.SecurityConstants.CLUB_URL_HEROKU;
+import static com.digiswit.exercise1.confederation.app.security.SecurityConstants.SWAGGER_UI_HEROKU;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -41,18 +44,18 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 		 * - The rests of end-points must be securized
 		 */	
 		
-		httpSecurity
+		/*httpSecurity
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 			.cors().and()
 			.csrf().disable()
-			.authorizeRequests().antMatchers(HttpMethod.POST, LOGIN_URL).permitAll()
+			.authorizeRequests().antMatchers(HttpMethod.POST, LOGIN_URL_HEROKU).permitAll()
 			.and()
-			.authorizeRequests().antMatchers(HttpMethod.POST, CLUB_URL).permitAll()
+			.authorizeRequests().antMatchers(HttpMethod.POST, CLUB_URL_HEROKU).permitAll()
 			.and()
-			.authorizeRequests().antMatchers(SWAGGER_UI).permitAll()
+			.authorizeRequests().antMatchers(SWAGGER_UI_HEROKU).permitAll()
 			.anyRequest().authenticated().and()
 				.addFilter(new JWTAuthenticationFilter(authenticationManager()))
-				.addFilter(new JWTAuthorizationFilter(authenticationManager()));
+				.addFilter(new JWTAuthorizationFilter(authenticationManager()));*/
 	}
 
 	@Override
