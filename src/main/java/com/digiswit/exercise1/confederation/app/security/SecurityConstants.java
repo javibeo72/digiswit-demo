@@ -14,7 +14,6 @@ public class SecurityConstants {
             "/v3/api-docs/**", "/swagger-ui/**"
      };
 	
-	
 	public static final String HEADER_AUTHORIZACION_KEY = "Authorization";
 	public static final String TOKEN_BEARER_PREFIX = "Bearer ";
 
