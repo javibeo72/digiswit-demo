@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "5ae82518-e9aa-4279-ab34-93a1eb665353",
+		"name": "Digiswit - EndPoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://football-club-app.herokuapp.com/club",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzAzNjU5NDUsImlzcyI6Imh0dHBzOi8vd3d3LmRpZ2l0c3dpdC5jb20vIiwic3ViIjoidXNlcjFAbWFpbC5jb20iLCJleHAiOjE2NzEyMjk5NDV9.AIjJtRTJvvAs9fbDPIi7MNoETPUv1i3XlyEQOOX4JO4PRz0EIFIA6UIeTvrTgsINeTHkzN_M6MzFSGkeV8aJqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://football-club-app.herokuapp.com/club",
+					"protocol": "https",
+					"host": [
+						"football-club-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"club"
+					]
+				},
+				"description": "List of all clubs that publish information"
+			},
+			"response": []
+		},
+		{
+			"name": "http:/football-club-app.herokuapp.com/club/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzAxOTYyNzcsImlzcyI6Imh0dHBzOi8vd3d3LmRpZ2l0c3dpdC5jb20vIiwic3ViIjoiY2FybG9zIiwiZXhwIjoxNjcxMDYwMjc3fQ.iOXFzOnsFDXsXkSKnv74g9ZJEECAT0Du2Mxfs2OE24VbhqXhk8F_FYkj3fWBG081O-NKN0b11M5gDW6HCezx3Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://football-club-app.herokuapp.com/club/1",
+					"protocol": "http",
+					"host": [
+						"football-club-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"club",
+						"1"
+					]
+				},
+				"description": "Get details for a club"
+			},
+			"response": []
+		},
+		{
+			"name": "http:/football-club-app.herokuapp.com/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"user1@mail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://football-club-app.herokuapp.com/login",
+					"protocol": "http",
+					"host": [
+						"football-club-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "Generate a JWT token from a user/password existing at DB."
+			},
+			"response": []
+		},
+		{
+			"name": "http://football-club-app.herokuapp.com/club",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": {\r\n    \"userName\": \"user4@mail.com\",\r\n    \"password\": \"12345678\"\r\n    \r\n  },\r\n   \"officialName\": \"Granada C.F.\",\r\n  \"popularName\": \"Granada\",  \r\n\"federation\": {\r\n    \"acronym\": \"RFEF\"\r\n  },\r\n  \"publicDetails\": true\r\n  \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/club",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"club"
+					]
+				},
+				"description": "Create a club"
+			},
+			"response": []
+		},
+		{
+			"name": "http://football-club-app.herokuapp.com/club",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzAzNjU5NDUsImlzcyI6Imh0dHBzOi8vd3d3LmRpZ2l0c3dpdC5jb20vIiwic3ViIjoidXNlcjFAbWFpbC5jb20iLCJleHAiOjE2NzEyMjk5NDV9.AIjJtRTJvvAs9fbDPIi7MNoETPUv1i3XlyEQOOX4JO4PRz0EIFIA6UIeTvrTgsINeTHkzN_M6MzFSGkeV8aJqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": {\r\n    \"userName\": \"user4@mail.com\",\r\n    \"password\": \"12345678\"\r\n    \r\n  },\r\n   \"officialName\": \"Granada Club Fútbol\",\r\n  \"popularName\": \"Granada\",  \r\n\"federation\": {\r\n    \"acronym\": \"RFEF\"\r\n  },\r\n  \"publicDetails\": true\r\n  \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://football-club-app.herokuapp.com/club",
+					"protocol": "http",
+					"host": [
+						"football-club-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"club"
+					]
+				},
+				"description": "Modify details for club"
+			},
+			"response": []
+		},
+		{
+			"name": "http://football-club-app.herokuapp.com/club/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzAxOTYyNzcsImlzcyI6Imh0dHBzOi8vd3d3LmRpZ2l0c3dpdC5jb20vIiwic3ViIjoiY2FybG9zIiwiZXhwIjoxNjcxMDYwMjc3fQ.iOXFzOnsFDXsXkSKnv74g9ZJEECAT0Du2Mxfs2OE24VbhqXhk8F_FYkj3fWBG081O-NKN0b11M5gDW6HCezx3Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://football-club-app.herokuapp.com/club/1",
+					"protocol": "http",
+					"host": [
+						"football-club-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"club",
+						"1"
+					]
+				},
+				"description": "Delete a club (not allowed yet)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://football-club-app.herokuapp.com/player",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzAxOTYyNzcsImlzcyI6Imh0dHBzOi8vd3d3LmRpZ2l0c3dpdC5jb20vIiwic3ViIjoiY2FybG9zIiwiZXhwIjoxNjcxMDYwMjc3fQ.iOXFzOnsFDXsXkSKnv74g9ZJEECAT0Du2Mxfs2OE24VbhqXhk8F_FYkj3fWBG081O-NKN0b11M5gDW6HCezx3Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://football-club-app.herokuapp.com/club/1/player",
+					"protocol": "http",
+					"host": [
+						"football-club-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"club",
+						"1",
+						"player"
+					]
+				},
+				"description": "Get the players for a club (id = 1)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://football-club-app.herokuapp.com/club/1/player/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzAxOTYyNzcsImlzcyI6Imh0dHBzOi8vd3d3LmRpZ2l0c3dpdC5jb20vIiwic3ViIjoiY2FybG9zIiwiZXhwIjoxNjcxMDYwMjc3fQ.iOXFzOnsFDXsXkSKnv74g9ZJEECAT0Du2Mxfs2OE24VbhqXhk8F_FYkj3fWBG081O-NKN0b11M5gDW6HCezx3Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://football-club-app.herokuapp.com/club/1/player/1",
+					"protocol": "http",
+					"host": [
+						"football-club-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"club",
+						"1",
+						"player",
+						"1"
+					]
+				},
+				"description": "Get details of player (id = 1) of club (id = 1)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://football-club-app.herokuapp.com/club/1/player",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzAzNjU5NDUsImlzcyI6Imh0dHBzOi8vd3d3LmRpZ2l0c3dpdC5jb20vIiwic3ViIjoidXNlcjFAbWFpbC5jb20iLCJleHAiOjE2NzEyMjk5NDV9.AIjJtRTJvvAs9fbDPIi7MNoETPUv1i3XlyEQOOX4JO4PRz0EIFIA6UIeTvrTgsINeTHkzN_M6MzFSGkeV8aJqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"givenName\": \"Thibaut\",\r\n    \"familyName\": \"Courtois\",\r\n    \"nationality\": \"Belgian\",\r\n    \"email\": \"tCourtois@com\",\r\n    \"dateOfBirth\": \"1980-01-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://football-club-app.herokuapp.com/club/1/player",
+					"protocol": "http",
+					"host": [
+						"football-club-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"club",
+						"1",
+						"player"
+					]
+				},
+				"description": "Create a player for club (id = 1)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://football-club-app.herokuapp.com/club/1/player/4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzAxOTYyNzcsImlzcyI6Imh0dHBzOi8vd3d3LmRpZ2l0c3dpdC5jb20vIiwic3ViIjoiY2FybG9zIiwiZXhwIjoxNjcxMDYwMjc3fQ.iOXFzOnsFDXsXkSKnv74g9ZJEECAT0Du2Mxfs2OE24VbhqXhk8F_FYkj3fWBG081O-NKN0b11M5gDW6HCezx3Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"givenName\": \"Thibaut\",\r\n    \"familyName\": \"Courtois\",\r\n    \"nationality\": \"Belgian\",\r\n    \"email\": \"tCourtois@com\",\r\n    \"dateOfBirth\": \"1992-05-11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://football-club-app.herokuapp.com/club/1/player/4",
+					"protocol": "http",
+					"host": [
+						"football-club-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"club",
+						"1",
+						"player",
+						"4"
+					]
+				},
+				"description": "Modify details of player (id = 4) for club (id = 1)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://football-club-app.herokuapp.com/club/1/player/4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzAxOTYyNzcsImlzcyI6Imh0dHBzOi8vd3d3LmRpZ2l0c3dpdC5jb20vIiwic3ViIjoiY2FybG9zIiwiZXhwIjoxNjcxMDYwMjc3fQ.iOXFzOnsFDXsXkSKnv74g9ZJEECAT0Du2Mxfs2OE24VbhqXhk8F_FYkj3fWBG081O-NKN0b11M5gDW6HCezx3Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://football-club-app.herokuapp.com/club/1/player/4",
+					"protocol": "http",
+					"host": [
+						"football-club-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"club",
+						"1",
+						"player",
+						"4"
+					]
+				},
+				"description": "Delete player (id = 4) from club (id = 1)"
+			},
+			"response": []
+		}
+	]
+}
