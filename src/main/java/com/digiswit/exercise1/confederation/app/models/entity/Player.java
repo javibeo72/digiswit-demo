@@ -40,6 +40,7 @@ public class Player implements Serializable {
 
 	// Only valid emails syntactically speaking must be accepted. It must be unique
 	// in the system.
+	@Column(nullable = false, unique = true)
 	@Email(message = "Invalid email format")
 	@NotBlank(message = "Player's email is mandatory")
 	private String email;
