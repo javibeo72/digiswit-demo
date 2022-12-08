@@ -20,8 +20,7 @@ public class FederationServiceImpl implements IFederationService {
 
 	@Override
 	public Federation save(Federation federation) {
-		// TODO Auto-generated method stub
-		return null;
+		return federationDao.save(federation);
 	}
 
 	@Override
